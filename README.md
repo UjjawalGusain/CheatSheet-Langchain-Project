@@ -55,6 +55,27 @@ To run this project, you need Python 3.7 or later. The project uses several thir
 
 After running this command, the application will start, and you can access it through your browser.
 
+## API
+This project utilizes multiple APIs to handle different operations, including data scraping and interaction with the model. The APIs integrated are:
+
+- Groq API:
+
+    - Model: llama-3.1-70b-versatile
+
+    - Purpose: The Groq API is used to interact with the large language model for generating responses, executing operations on the dataset, and handling complex queries. The model llama-3.1-70b-versatile is utilized for efficient natural language understanding and generation, helping process queries and produce actionable results.
+
+    - Usage: 
+        - The API is called to process queries related to the data, including operations like extraction, filtering, and generating summaries. The response from the model helps in shaping the operations applied to the dataset.
+
+        - The prompts used for the model are structured in a specific format to ensure the desired response and avoid errors during execution.
+
+- Scraper API:
+
+    - Purpose: The Scraper API is used to gather additional data from external sources and append this data to the dataset.
+
+    - Usage:
+        - Once the dataset is processed and the necessary operations are performed, the Scraper API helps to enrich the data with additional columns scraped from external resources. This is done by adding a "scraped" column to the DataFrame.
+
 ## Usage
 
 ### Upload Data:

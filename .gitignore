@@ -1,4 +1,4 @@
-env/
+.env
 venv/
 
 credentials.json

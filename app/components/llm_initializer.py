@@ -1,13 +1,13 @@
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 import os
-
+from dashboard import st
 
 load_dotenv()
 
 
 if "GROQ_API_KEY" not in os.environ:
-    os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")
+    os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
 
     
 llm = ChatGroq(

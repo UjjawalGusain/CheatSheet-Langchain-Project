@@ -4,11 +4,12 @@ import requests
 from app.components.llm_initializer import llm
 import pandas as pd
 from bs4 import BeautifulSoup
-import time
+from dashboard import st
+
 
 # Load your API key from environment variables
 load_dotenv()
-api_key = os.getenv("SCRAPER_API_KEY")
+api_key = st.secrets["SCRAPER_API_KEY"]
 
 import json
 

@@ -4,7 +4,7 @@ import requests
 from app.components.llm_initializer import llm
 import pandas as pd
 from bs4 import BeautifulSoup
-from dashboard import st
+from streamlit_initialize import st
 
 
 # Load your API key from environment variables

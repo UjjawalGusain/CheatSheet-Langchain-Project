@@ -1,9 +1,9 @@
-import streamlit as st
 from app.components.data_loader import load_csv, load_google_sheet
 import pandas as pd
 from app.components.llm_handler import generate_resultant_df_from_model
 from app.components.schema_creation import create_schema
 import matplotlib.pyplot as plt
+from streamlit_initialize import st
 
 # Title
 st.title("AI Agent Project: Automated Data Extraction")

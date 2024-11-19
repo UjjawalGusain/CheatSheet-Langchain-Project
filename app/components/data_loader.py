@@ -5,7 +5,7 @@ import gspread
 import os
 import json
 from dotenv import load_dotenv
-from dashboard import st
+from streamlit_initialize import st
 
 load_dotenv()
 

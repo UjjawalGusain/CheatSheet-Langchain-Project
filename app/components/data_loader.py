@@ -5,15 +5,17 @@ import gspread
 import os
 import json
 from dotenv import load_dotenv
+import streamlit as st
 
 load_dotenv()
 
-if "GOOGLE_SHEET_CREDENTIALS" not in os.environ:
-    os.environ["GOOGLE_SHEET_CREDENTIALS"] = os.getenv("GOOGLE_SHEET_CREDENTIALS")
+# if "GOOGLE_SHEET_CREDENTIALS" not in os.environ:
+#     os.environ["GOOGLE_SHEET_CREDENTIALS"] = os.getenv("GOOGLE_SHEET_CREDENTIALS")
+
 
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 # creds = Credentials.from_service_account_file("credentials.json", scopes=SCOPES)
-credentials_json = os.getenv("GOOGLE_SHEET_CREDENTIALS")
+credentials_json = st.secrets["GOOGLE_SHEET_CREDENTIALS"]
 
 # Parse the JSON and use it to authenticate
 credentials_info = json.loads(credentials_json)

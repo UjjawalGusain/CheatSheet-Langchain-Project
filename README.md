@@ -26,7 +26,8 @@ This project leverages an AI agent for automated data extraction and processing.
 - Output Formats: Results are displayed in different formats such as tables, plots (bar/pie), or strings, depending on the query.
 - Error Handling: Robust error handling ensures smooth user interaction even in case of issues like invalid file formats or data manipulation errors.
 
-## Deployment link: https://cheatsheet-app.streamlit.app/
+## Deployment link
+- [Cheatsheet App on Streamlit](https://cheatsheet-app.streamlit.app/)
 
 ## Installation
 

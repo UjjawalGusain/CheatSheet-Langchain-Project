@@ -15,10 +15,8 @@ load_dotenv()
 
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 # creds = Credentials.from_service_account_file("credentials.json", scopes=SCOPES)
-credentials_json = st.secrets["GOOGLE_SHEET_CREDENTIALS"]
-
-# Parse the JSON and use it to authenticate
-credentials_info = json.loads(credentials_json)
+credentials_json = dict(st.secrets["GOOGLE_SHEET_CREDENTIALS"])
+credentials_info = json.loads(json.dumps(credentials_json))
 creds = Credentials.from_service_account_info(credentials_info, scopes=SCOPES)
 client = gspread.authorize(creds)
 

@@ -1,7 +1,7 @@
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 import os
-from dashboard import st
+from streamlit_initialize import st
 
 load_dotenv()
 

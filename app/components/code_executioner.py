@@ -16,7 +16,7 @@ def apply_operations(df, operations):
     for operation in operations:
         try:
             # Execute the operation and modify the local scope
-            exec(operation, globals(), local_scope)
+            exec(operation, {"__builtins__": None}, local_scope)
         except Exception as e:
             logging.error(f"Error executing operation: {e}. Operation: {operation}")
 
